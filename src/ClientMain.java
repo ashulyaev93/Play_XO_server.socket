@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -8,7 +9,7 @@ public class ClientMain {
         Socket socket = null;
 
         try {
-            socket = new Socket("localhost", 8080);
+            socket = new Socket("localhost", 8189);
             System.out.println("Вы в сети");
 
             Scanner in = new Scanner(socket.getInputStream());
@@ -36,7 +37,7 @@ public class ClientMain {
                     while (true) {
                         System.out.println("Введите координаты");
                         String str = console.nextLine();
-                        System.out.println("Сообщение отправлено!");
+                        System.out.println("Ход сделан!");
                         out.println(str);
                     }
                 }
